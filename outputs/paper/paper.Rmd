@@ -57,7 +57,7 @@ c_data  %>%
                                  values=c("#01378C","#2cd18c", "#ff3d3d"))
 ```
 
-```{r fig2,echo=FALSE,fig.cap = "Distribution of national spending on foreign aid"}
+```{r fig2,echo=FALSE,fig.cap = "Distribution of national spending on "}
 c_data$nataid <- factor(c_data$nataid,                                  
                   levels = c("Too little", "About right", "Too much"))
 c_data  %>%

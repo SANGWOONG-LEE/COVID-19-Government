@@ -45,7 +45,6 @@ reduced_data1 <-
          eqwlth,
          health,
          helpsick,
-         helpnot,
          helppoor)
 reduced_data2 <-
   raw_data2 %>% 
@@ -69,7 +68,6 @@ reduced_data2 <-
          eqwlth,
          health,
          helpsick,
-         helpnot,
          helppoor)
 reduced_data1$year <- "2018"
 reduced_data2$year <- "2021"
@@ -193,19 +191,11 @@ c_data <-
     helpsick == 5 ~ "No"))
 c_data <-
   c_data  %>% 
-  mutate(helpnot = case_when(
-    helpnot == 1 ~ "Yes",
-    helpnot == 2 ~ "Somewhat",
-    helpnot == 3 ~ "Both",
-    helpnot == 5 ~ "No"))
-c_data <-
-  c_data  %>% 
   mutate(helppoor = case_when(
     helppoor == 1 ~ "Yes",
     helppoor == 2 ~ "Somewhat",
     helppoor == 3 ~ "Both",
     helppoor == 5 ~ "No"))
-
 
 #### Save ####
 write_csv(reduced_data1, "outputs/data/prepared_gss1.csv")

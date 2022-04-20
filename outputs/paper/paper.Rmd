@@ -50,7 +50,8 @@ c_data  %>%
     geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
     geom_text(aes( label = scales::percent(..prop..),
                    y= ..prop.. ), stat= "count", vjust = -0.4) +
-    labs(x = element_blank(),y = "Percent", fill = "National Spending Level") +
+    labs(x = element_blank(),y = "Percent", fill = "National Spending Level", title =
+           "National Spending on Foreign Aid") +
     facet_grid(~year) +
     scale_y_continuous(labels = scales::percent) +
     scale_fill_manual(labels = c("1" = "Too little", "2" = "About right", "3" = "Too much"),
@@ -66,7 +67,8 @@ c_data  %>%
     geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
     geom_text(aes( label = scales::percent(..prop..),
                    y= ..prop.. ), stat= "count", vjust = -0.4) +
-    labs(x = element_blank(),y = "Percent", fill = "National Spending Level") +
+    labs(x = element_blank(),y = "Percent", fill = "National Spending Level", title =
+           "National Spending on Arms") +
     facet_grid(~ year) +
     scale_y_continuous(labels = scales::percent) +
     scale_fill_manual(labels = c("1" = "Too little", "2" = "About right", "3" = "Too much"),
@@ -82,16 +84,322 @@ c_data  %>%
     geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
     geom_text(aes( label = scales::percent(..prop..),
                    y= ..prop.. ), stat= "count", vjust = -0.4) +
-    labs(x = element_blank(),y = "Percent", fill = "National Spending Level") +
+    labs(x = element_blank(),y = "Percent", fill = "National Spending Level", title =
+           "National Spending on Childcare") +
     facet_grid(~ year) +
     scale_y_continuous(labels = scales::percent) +
     scale_fill_manual(labels = c("1" = "Too little", "2" = "About right", "3" = "Too much"),
                                  values=c("#01378C","#2cd18c", "#ff3d3d"))
 ```
 
-```{r}
+```{r fig4,echo=FALSE,fig.cap = "Distribution of national spending on big cities problems"}
+c_data$natcity <- factor(c_data$natcity,                                  
+                  levels = c("Too little", "About right", "Too much"))
+c_data  %>%
+  drop_na(natcity)  %>%
+   ggplot(aes(x= natcity,group=year)) + 
+    geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
+    geom_text(aes( label = scales::percent(..prop..),
+                   y= ..prop.. ), stat= "count", vjust = -0.4) +
+    labs(x = element_blank(),y = "Percent", fill = "National Spending Level", title =
+           "National Spending on Big Cities Problems") +
+    facet_grid(~ year) +
+    scale_y_continuous(labels = scales::percent) +
+    scale_fill_manual(labels = c("1" = "Too little", "2" = "About right", "3" = "Too much"),
+                                 values=c("#01378C","#2cd18c", "#ff3d3d"))
+```
+
+```{r fig5,echo=FALSE,fig.cap = "Distribution of national spending on halting crime rates"}
+c_data$natcrime <- factor(c_data$natcrime,                                  
+                  levels = c("Too little", "About right", "Too much"))
+c_data  %>%
+  drop_na(natcrime)  %>%
+   ggplot(aes(x= natcrime,group=year)) + 
+    geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
+    geom_text(aes( label = scales::percent(..prop..),
+                   y= ..prop.. ), stat= "count", vjust = -0.4) +
+    labs(x = element_blank(),y = "Percent", fill = "National Spending Level", title =
+           "National Spending on Halting Crime Rates") +
+    facet_grid(~ year) +
+    scale_y_continuous(labels = scales::percent) +
+    scale_fill_manual(labels = c("1" = "Too little", "2" = "About right", "3" = "Too much"),
+                                 values=c("#01378C","#2cd18c", "#ff3d3d"))
+```
+
+```{r fig6,echo=FALSE,fig.cap = "Distribution of national spending on dealing with drug addicts"}
+c_data$natdrug <- factor(c_data$natdrug,                                  
+                  levels = c("Too little", "About right", "Too much"))
+c_data  %>%
+  drop_na(natdrug)  %>%
+   ggplot(aes(x= natdrug,group=year)) + 
+    geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
+    geom_text(aes( label = scales::percent(..prop..),
+                   y= ..prop.. ), stat= "count", vjust = -0.4) +
+    labs(x = element_blank(),y = "Percent", fill = "National Spending Level", title = 
+           "National Spending on Dealing with Drug Addicts") +
+    facet_grid(~ year) +
+    scale_y_continuous(labels = scales::percent) +
+    scale_fill_manual(labels = c("1" = "Too little", "2" = "About right", "3" = "Too much"),
+                                 values=c("#01378C","#2cd18c", "#ff3d3d"))
+```
+
+```{r fig7,echo=FALSE,fig.cap = "Distribution of national spending on improving education"}
+c_data$nateduc <- factor(c_data$nateduc,                                  
+                  levels = c("Too little", "About right", "Too much"))
+c_data  %>%
+  drop_na(nateduc)  %>%
+   ggplot(aes(x= nateduc,group=year)) + 
+    geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
+    geom_text(aes( label = scales::percent(..prop..),
+                   y= ..prop.. ), stat= "count", vjust = -0.4) +
+    labs(x = element_blank(),y = "Percent", fill = "National Spending Level", title = 
+           "National Spending on Improving Education") +
+    facet_grid(~ year) +
+    scale_y_continuous(labels = scales::percent) +
+    scale_fill_manual(labels = c("1" = "Too little", "2" = "About right", "3" = "Too much"),
+                                 values=c("#01378C","#2cd18c", "#ff3d3d"))
+```
+
+```{r fig8,echo=FALSE,fig.cap = "Distribution of national spending on developing alternatives energy sources"}
+c_data$natenrgy <- factor(c_data$natenrgy,                                  
+                  levels = c("Too little", "About right", "Too much"))
+c_data  %>%
+  drop_na(natenrgy)  %>%
+   ggplot(aes(x= natenrgy,group=year)) + 
+    geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
+    geom_text(aes( label = scales::percent(..prop..),
+                   y= ..prop.. ), stat= "count", vjust = -0.4) +
+    labs(x = element_blank(),y = "Percent", fill = "National Spending Level", title = 
+           "National Spending on Developing Alternatives Energy") +
+    facet_grid(~ year) +
+    scale_y_continuous(labels = scales::percent) +
+    scale_fill_manual(labels = c("1" = "Too little", "2" = "About right", "3" = "Too much"),
+                                 values=c("#01378C","#2cd18c", "#ff3d3d"))
+```
+
+```{r fig9,echo=FALSE,fig.cap = "Distribution of national spending on protecting environment"}
+c_data$natenvir <- factor(c_data$natenvir,                                  
+                  levels = c("Too little", "About right", "Too much"))
+c_data  %>%
+  drop_na(natenvir)  %>%
+   ggplot(aes(x= natenvir,group=year)) + 
+    geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
+    geom_text(aes( label = scales::percent(..prop..),
+                   y= ..prop.. ), stat= "count", vjust = -0.4) +
+    labs(x = element_blank(),y = "Percent", fill = "National Spending Level", title = 
+           "National Spending on Protecting Environment") +
+    facet_grid(~ year) +
+    scale_y_continuous(labels = scales::percent) +
+    scale_fill_manual(labels = c("1" = "Too little", "2" = "About right", "3" = "Too much"),
+                                 values=c("#01378C","#2cd18c", "#ff3d3d"))
+```
+
+```{r fig10,echo=FALSE,fig.cap = "Distribution of national spending on Welfare"}
+c_data$natfare <- factor(c_data$natfare,                                  
+                  levels = c("Too little", "About right", "Too much"))
+c_data  %>%
+  drop_na(natfare)  %>%
+   ggplot(aes(x= natfare,group=year)) + 
+    geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
+    geom_text(aes( label = scales::percent(..prop..),
+                   y= ..prop.. ), stat= "count", vjust = -0.4) +
+    labs(x = element_blank(),y = "Percent", fill = "National Spending Level", title = 
+           "National Spending on Welfare") +
+    facet_grid(~ year) +
+    scale_y_continuous(labels = scales::percent) +
+    scale_fill_manual(labels = c("1" = "Too little", "2" = "About right", "3" = "Too much"),
+                                 values=c("#01378C","#2cd18c", "#ff3d3d"))
+```
+
+```{r fig11,echo=FALSE,fig.cap = "Distribution of national spending on improving health"}
+c_data$natheal <- factor(c_data$natheal,                                  
+                  levels = c("Too little", "About right", "Too much"))
+c_data  %>%
+  drop_na(natheal)  %>%
+   ggplot(aes(x= natheal,group=year)) + 
+    geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
+    geom_text(aes( label = scales::percent(..prop..),
+                   y= ..prop.. ), stat= "count", vjust = -0.4) +
+    labs(x = element_blank(),y = "Percent", fill = "National Spending Level", title = 
+           "National Spending on Improving Health") +
+    facet_grid(~ year) +
+    scale_y_continuous(labels = scales::percent) +
+    scale_fill_manual(labels = c("1" = "Too little", "2" = "About right", "3" = "Too much"),
+                                 values=c("#01378C","#2cd18c", "#ff3d3d"))
+```
+
+```{r fig12,echo=FALSE,fig.cap = "Distribution of national spending on mass transportation"}
+c_data$natmass <- factor(c_data$natmass,                                  
+                  levels = c("Too little", "About right", "Too much"))
+c_data  %>%
+  drop_na(natmass)  %>%
+   ggplot(aes(x= natmass,group=year)) + 
+    geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
+    geom_text(aes( label = scales::percent(..prop..),
+                   y= ..prop.. ), stat= "count", vjust = -0.4) +
+    labs(x = element_blank(),y = "Percent", fill = "National Spending Level", title = 
+           "National Spending on Mass Transportation") +
+    facet_grid(~ year) +
+    scale_y_continuous(labels = scales::percent) +
+    scale_fill_manual(labels = c("1" = "Too little", "2" = "About right", "3" = "Too much"),
+                                 values=c("#01378C","#2cd18c", "#ff3d3d"))
+```
+
+```{r fig13,echo=FALSE,fig.cap = "Distribution of national spending on park and recreation"}
+c_data$natpark <- factor(c_data$natpark,                                  
+                  levels = c("Too little", "About right", "Too much"))
+c_data  %>%
+  drop_na(natpark)  %>%
+   ggplot(aes(x= natpark,group=year)) + 
+    geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
+    geom_text(aes( label = scales::percent(..prop..),
+                   y= ..prop.. ), stat= "count", vjust = -0.4) +
+    labs(x = element_blank(),y = "Percent", fill = "National Spending Level", title = 
+           "National Spending on Park and Recreation") +
+    facet_grid(~ year) +
+    scale_y_continuous(labels = scales::percent) +
+    scale_fill_manual(labels = c("1" = "Too little", "2" = "About right", "3" = "Too much"),
+                                 values=c("#01378C","#2cd18c", "#ff3d3d"))
+```
+
+```{r fig14,echo=FALSE,fig.cap = "Distribution of national spending on improving the conditions of black"}
+c_data$natrace <- factor(c_data$natrace,                                  
+                  levels = c("Too little", "About right", "Too much"))
+c_data  %>%
+  drop_na(natrace)  %>%
+   ggplot(aes(x= natrace,group=year)) + 
+    geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
+    geom_text(aes( label = scales::percent(..prop..),
+                   y= ..prop.. ), stat= "count", vjust = -0.4) +
+    labs(x = element_blank(),y = "Percent", fill = "National Spending Level", title = 
+           "National Spending on Improving Conditions of Black") +
+    facet_grid(~ year) +
+    scale_y_continuous(labels = scales::percent) +
+    scale_fill_manual(labels = c("1" = "Too little", "2" = "About right", "3" = "Too much"),
+                                 values=c("#01378C","#2cd18c", "#ff3d3d"))
+```
+
+```{r fig15,echo=FALSE,fig.cap = "Distribution of national spending on highway and bridges"}
+c_data$natroad <- factor(c_data$natroad,                                  
+                  levels = c("Too little", "About right", "Too much"))
+c_data  %>%
+  drop_na(natroad)  %>%
+   ggplot(aes(x= natroad,group=year)) + 
+    geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
+    geom_text(aes( label = scales::percent(..prop..),
+                   y= ..prop.. ), stat= "count", vjust = -0.4) +
+    labs(x = element_blank(),y = "Percent", fill = "National Spending Level", title = 
+           "National Spending on Highway and Bridge") +
+    facet_grid(~ year) +
+    scale_y_continuous(labels = scales::percent) +
+    scale_fill_manual(labels = c("1" = "Too little", "2" = "About right", "3" = "Too much"),
+                                 values=c("#01378C","#2cd18c", "#ff3d3d"))
+```
+
+```{r fig16,echo=FALSE,fig.cap = "Distribution of national spending on scientific research"}
+c_data$natsci <- factor(c_data$natsci,                                  
+                  levels = c("Too little", "About right", "Too much"))
+c_data  %>%
+  drop_na(natsci)  %>%
+   ggplot(aes(x= natsci,group=year)) + 
+    geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
+    geom_text(aes( label = scales::percent(..prop..),
+                   y= ..prop.. ), stat= "count", vjust = -0.4) +
+    labs(x = element_blank(),y = "Percent", fill = "National Spending Level", title = 
+           "National Spending on Supporting Scientific Research") +
+    facet_grid(~ year) +
+    scale_y_continuous(labels = scales::percent) +
+    scale_fill_manual(labels = c("1" = "Too little", "2" = "About right", "3" = "Too much"),
+                                 values=c("#01378C","#2cd18c", "#ff3d3d"))
+```
+
+```{r fig17,echo=FALSE,fig.cap = "Distribution of national spending on social security"}
+c_data$natsoc <- factor(c_data$natsoc,                                  
+                  levels = c("Too little", "About right", "Too much"))
+c_data  %>%
+  drop_na(natsoc)  %>%
+   ggplot(aes(x= natsoc,group=year)) + 
+    geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
+    geom_text(aes( label = scales::percent(..prop..),
+                   y= ..prop.. ), stat= "count", vjust = -0.4) +
+    labs(x = element_blank(),y = "Percent", fill = "National Spending Level", title = 
+           "National Spending on Seocial Security") +
+    facet_grid(~ year) +
+    scale_y_continuous(labels = scales::percent) +
+    scale_fill_manual(labels = c("1" = "Too little", "2" = "About right", "3" = "Too much"),
+                                 values=c("#01378C","#2cd18c", "#ff3d3d"))
+```
+
+```{r fig18,echo=FALSE,fig.cap = "Respondents self Health Conditions"}
+c_data$health <- factor(c_data$health,                                  
+                  levels = c("Poor", "Fair", "Good", "Excellent"))
+c_data  %>%
+  drop_na(health)  %>%
+   ggplot(aes(x= health,group=year)) + 
+    geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
+    geom_text(aes( label = scales::percent(..prop..),
+                   y= ..prop.. ), stat= "count", vjust = -0.4) +
+    labs(x = element_blank(),y = "Percent", fill = "Health Conditions", title = 
+           "Respondents' Health Conditions by Self Assessment") +
+    facet_grid(~ year) +
+    scale_y_continuous(labels = scales::percent) +
+    scale_fill_manual(labels = c("1" = "Poor", "2" = "Fair", "3" = "Good", "4" = "Excellent"),
+                                 values=c("#F0E442", "#0072B2", "#D55E00", "#CC79A7"))
+```
+
+```{r fig19,echo=FALSE,fig.cap = "Government and Individuals on Health"}
+c_data$helpsick <- factor(c_data$helpsick,                                  
+                  levels = c("No", "Somewhat", "Both", "Yes"))
+c_data  %>%
+  drop_na(helpsick)  %>%
+   ggplot(aes(x= helpsick,group=year)) + 
+    geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
+    geom_text(aes( label = scales::percent(..prop..),
+                   y= ..prop.. ), stat= "count", vjust = -0.4) +
+    labs(x = element_blank(),y = "Percent", fill = "Response", title = 
+           "Should Government Be Responsible for Taking Care of Individuals?") +
+    facet_grid(~ year) +
+    scale_y_continuous(labels = scales::percent) +
+    scale_fill_manual(labels = c("1" = "No", "2" = "Somewhat", "3" = "Both", "4" = "Yes"),
+                                 values=c("#F0E442", "#0072B2", "#D55E00", "#CC79A7"))
+```
+
+```{r fig20,echo=FALSE,fig.cap = "Government and Individuals on Poor"}
+c_data$helppoor <- factor(c_data$helppoor,                                  
+                  levels = c("No", "Somewhat", "Both", "Yes"))
+c_data  %>%
+  drop_na(helppoor)  %>%
+   ggplot(aes(x= helppoor,group=year)) + 
+    geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
+    geom_text(aes( label = scales::percent(..prop..),
+                   y= ..prop.. ), stat= "count", vjust = -0.4) +
+    labs(x = element_blank(),y = "Percent", fill = "Response", title = 
+           "Should Government Be Responsible for Improving Standard Livings?") +
+    facet_grid(~ year) +
+    scale_y_continuous(labels = scales::percent) +
+    scale_fill_manual(labels = c("1" = "No", "2" = "Somewhat", "3" = "Both", "4" = "Yes"),
+                                 values=c("#F0E442", "#0072B2", "#D55E00", "#CC79A7"))
 
 ```
+
+```{r fig21,echo=FALSE,fig.cap = "Government Reducing Income Differences"}
+c_data$eqwlth <- factor(c_data$eqwlth)                                 
+                  
+c_data  %>%
+  drop_na(eqwlth)  %>%
+   ggplot(aes(x= eqwlth,group=year)) + 
+    geom_bar(aes(y = ..prop.., fill = factor(..x..))) +
+    geom_text(aes( label = scales::percent(..prop..),
+                   y= ..prop.. ), stat= "count", vjust = -0.4, size = 3) +
+    labs(x = element_blank(),y = "Percent", fill = "Levels", title = 
+           "Should Government Be Responsible for Reducing Income Differences") +
+    facet_grid(~ year) +
+    scale_y_continuous(labels = scales::percent) +
+    scale_fill_manual(labels = c("1" = "Yes", "7" = "No"),
+                                 values=c("#01378C","#2cd18c", "#ff3d3d","#F0E442", "#0072B2", "#D55E00", "#CC79A7"))
+```
+
+
 
 \newpage
 

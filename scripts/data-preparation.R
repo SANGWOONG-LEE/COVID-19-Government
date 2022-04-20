@@ -42,7 +42,11 @@ reduced_data1 <-
          natroad,
          natsci,
          natsoc,
-         eqwlth)
+         eqwlth,
+         health,
+         helpsick,
+         helpnot,
+         helppoor)
 reduced_data2 <-
   raw_data2 %>% 
   select(nataid,
@@ -62,7 +66,11 @@ reduced_data2 <-
          natroad,
          natsci,
          natsoc,
-         eqwlth)
+         eqwlth,
+         health,
+         helpsick,
+         helpnot,
+         helppoor)
 reduced_data1$year <- "2018"
 reduced_data2$year <- "2021"
 c_data <- rbind(reduced_data1, reduced_data2)
@@ -169,6 +177,36 @@ c_data <-
     natsoc == 1 ~ "Too little",
     natsoc == 2 ~ "About right",
     natsoc == 3 ~ "Too much"))
+c_data <-
+  c_data  %>% 
+  mutate(health = case_when(
+    health == 1 ~ "Excellent",
+    health == 2 ~ "Good",
+    health == 3 ~ "Fair",
+    health == 4 ~ "Poor"))
+c_data <-
+  c_data  %>% 
+  mutate(helpsick = case_when(
+    helpsick == 1 ~ "Yes",
+    helpsick == 2 ~ "Somewhat",
+    helpsick == 3 ~ "Both",
+    helpsick == 5 ~ "No"))
+c_data <-
+  c_data  %>% 
+  mutate(helpnot = case_when(
+    helpnot == 1 ~ "Yes",
+    helpnot == 2 ~ "Somewhat",
+    helpnot == 3 ~ "Both",
+    helpnot == 5 ~ "No"))
+c_data <-
+  c_data  %>% 
+  mutate(helppoor = case_when(
+    helppoor == 1 ~ "Yes",
+    helppoor == 2 ~ "Somewhat",
+    helppoor == 3 ~ "Both",
+    helppoor == 5 ~ "No"))
+
+
 #### Save ####
 write_csv(reduced_data1, "outputs/data/prepared_gss1.csv")
 write_csv(reduced_data2, "outputs/data/prepared_gss2.csv")

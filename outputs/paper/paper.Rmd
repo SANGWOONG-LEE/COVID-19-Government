@@ -25,6 +25,7 @@ library(modelsummary)
 # Introduction
 First paragraph : broader context for motivation
 
+
 Second paragraph : some detail about what the paper is about
 
 Third paragraph: a clear gap that needs to be filled
@@ -477,6 +478,38 @@ According to Forbes research, foreign aid spent by U.S is decreasing over years 
 \appendix
 
 # Appendix {-}
+In this session, I am going to deal with remained data explanation. Since no dramatic changes were observed in remained variables, I combined them by patterns. 
+
+1) Decrease in "Too little" and increase in "About right" and "Too much"
+
+- Big cities Problems (figure \@ref(fig:fig4))
+- Education (figure \@ref(fig:fig7))
+
+
+2) Decrease in "Too little" and "About right" and increase in "Too much"
+
+- Childcare (figure \@ref(fig:fig3))
+- Crime rates (figure \@ref(fig:fig5))
+- New energy (figure \@ref(fig:fig8))
+- Social security (figure \@ref(fig:fig17))
+
+
+3) Decrease in "About right" and increase in "Too little" and "Too much"
+
+- Environment (figure \@ref(fig:fig9))
+
+4) Decrease in "Too much" and increase in "Too little and "About right"
+
+- Road (figure \@ref(fig:fig15))
+
+4) only subtle changes. 
+
+- Mass transportation (figure \@ref(fig:fig12))
+- Park and Recreation (figure \@ref(fig:fig13))
+- Scientific research (figure \@ref(fig:fig16)) 
+
+
+
 
 
 

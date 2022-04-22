@@ -1,6 +1,6 @@
 ---
-title: "Disagreement Regarding 2016 Presidential Election in the United States^[Code and data are available at: https://github.com/SANGWOONG-LEE/2016electionanalysis]"
-subtitle: "Possible factors effecting 2016 election"
+title: "Missing years 2019 and 2020^[Code and data are available at: https://github.com/SANGWOONG-LEE/2016electionanalysis]"
+subtitle: "COVID-19 influences on U.S citizens' mind regarding government actions"
 author: 
   - SangWoong Lee
 date: "`r format(Sys.time(), '%d %B %Y')`"
@@ -34,9 +34,7 @@ This report was created using `R` [@citeR] and its libraries `tidyverse` [@tidyv
 # Data
 ```{r, include=FALSE, echo=FALSE}
 # Read the reduced and cleaned data, modification done in data-preparation.r file
-reduced_data1 <- read_csv("outputs/data/prepared_gss1.csv")
-reduced_data2 <- read_csv("outputs/data/prepared_gss2.csv")
-c_data <- read_csv("outputs/data/combined_data.csv")
+c_data <- read_csv("outputs/combined_data.csv")
 ```
 
 Data Explanation 

@@ -198,9 +198,7 @@ c_data <-
     helppoor == 5 ~ "No"))
 
 #### Save ####
-write_csv(reduced_data1, "outputs/data/prepared_gss1.csv")
-write_csv(reduced_data2, "outputs/data/prepared_gss2.csv")
-write_csv(c_data, "outputs/data/combined_data.csv")
+write_csv(c_data, 'outputs/combined_data.csv')
 
 
          

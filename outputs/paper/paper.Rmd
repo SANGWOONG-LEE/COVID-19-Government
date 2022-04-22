@@ -42,12 +42,11 @@ This report was created using `R` [@citeR] and its libraries `tidyverse` [@tidyv
 c_data <- read_csv("outputs/combined_data.csv")
 ```
 
-Data Explanation 
-
-For this paper, my aim is to find out changes in U.S citizens' minds regarding government before and after COVID-19 outbreak. Following that, I obtained datasets from U.S GSS 2018 and 2021 since COVID-19 was first reported on 2019. There are numerous surveys about COVID-19, however in order to analyze changes in general thoughts, they are not as appropriate as U.S GSS. Most COVID-19 surveys were specifically aimed for health care fields. For instance, whether healthcare system was enough to cover all patients or not was a major point for most COVID-19 surveys. On the other hand, U.S GSS datasets included more various fields such as national spending on drug, crime and etc, thus it can rather represent more general changes.
-Among countless variables existing in U.S GSS, I chose opinions on national spending and government actions. Since I used two different years for comparison, I had to find out which variables were in common, then combined them. 
+For this paper, I aimed to find out changes in U.S citizens' minds regarding the government before and after COVID-19 outbreak. Following that, I obtained datasets from U.S GSS 2018 and 2021 considering first outbreak of COVID-19, which was in Dec 2019. There are numerous surveys about COVID-19, however in order to observe general thought changes, they are not as appropriate as U.S GSS. Most COVID-19 surveys were specifically aimed for healthcare fields. For instance, whether healthcare system was enough to cover all patients or not was a major point for most COVID-19 surveys. On the other hand, U.S GSS datasets included more various fields such as national spending on drug, crime and etc, thus it can rather represent more general changes than specific areas.
+Among countless variables existing in U.S GSS, I chose national spending levels and government actions. Since I needed to use two different years for comparison, I had to extract variables that were in common, then combined them. Also, since number of samples was different, converting sample size to percentage was needed. 
 
 The variables I collected were as followed:
+
 1) National spending on various fields (foreign aids, arms, children, big cities, crime, drug,
 education, new energy, environment, fare, healthcare, mass transportation, parks, race, roads, science and social security )
 
@@ -55,14 +54,45 @@ education, new energy, environment, fare, healthcare, mass transportation, parks
 
 3) Respondents' health
 
-There exists 17 variables in national spending and 3 variables regarding government actions. Since, dealing with all variables in this session would take much spaces, for those that did not change much between 2018 and 2022, I am going to deal with in Appendix. 
+There exists 17 variables in national spending and 3 variables regarding government actions. Since, dealing with all variables in this session would take much spaces, for those that did not change much from 2018 to 2022, I am going to deal with in Appendix. 
 
+First, to make the demarcation between data session and appendix, I focused on two parts: whether there existed different patterns or noticeable changes between two graphs 2018 and 2021. For instance, figure \@ref(fig:fig7) shows us same pattern between 2018 and 2022, and there exists subtle changes. On the other hand, although figure \@ref(fig:fig6) presents the same pattern, changes in percentage are relatively fluctuating than others. For an another example, figure \@ref(fig:fig2) presents different pattern between 2018 and 2021. Therefore, with respect to two the aspects, I am going to explain my data here.
 
+1) National spending (Foreign aid, Arms, Drug addicts, Welfare, race)
 
+- Foreign Aid
 
+Let's take a look at figure \@ref(fig:fig1). In general, majority of respondents answered either "Too much" or "About right". What is interesting here is 7.8% decrease in "Too little" and 9.2% increase in "Too much". These numbers might seem subtle, however if we put this into whole population of U.S, it is 25.7 million and 30.34 million respectively. 
 
+- Arms
 
+If you take a look at figure \@ref(fig:fig2), you can observe two different patterns. "Too little" and "Too much" in 2018 has been reversed in 2021. If you think about U.S withdraw from Afghanistan in 2021, this would make sense.
 
+- Drug Addicts
+
+This is an indicator that contradicts with drug overdose death data. According to CDC, death rate from drug overdoes is increasing over years. However, figure \@ref(fig:fig6) presents the decreasing in "Too little", although it is  the highest among three indicators. 
+
+- Welfare
+
+Welfare graph seems relatively obvious than those above. Figure \@ref(fig:fig10) shows us that more voices on increasing national spending on welfare. Here I strongly suspect the COVID-19 outbreak as a main reason for the change. 
+
+- Race
+
+Figure \@ref(fig:fig14) shows the national spending on improvement in Black conditions. Even though "Too little" is higher than others, it decreased over the years. On the other hand, "Too much" increased by 9.4%. As I mentioned above, this percent is huge. Unfortunately, there is a limit in this variable. Black alone cannot represent all races in U.S, thus it is hard to generalize all races from this data. However, the differences observed in this graph possesses valuable meanings. 
+
+2) Government actions
+
+- Income equality and help poor
+
+This two variables are very similar. Income equality is regarding whether government should impose more taxes on the rich for better income equality or not, and help poor is whether government should be responsible for helping the poor or not. Thankfully, they both present similar pattern, which enhances the reliability about the survey. Majority thinks that government and individuals both are responsible for income differences. One thing to notice here is that voice for government responsibility increased over years.
+
+- The sick
+
+The two graph in figure \@ref(fig:fig19) seems very similar, but this does not mean that it does not possess valuable meanings. In 2020 - 2021 when U.S GSS 2021 was conducted, although COVID-19 cases did not surge up as much as 2022, but with eyes in 2021, it was increasing. However, before and after COVID-19, there is no difference in response regarding government actions toward the sick. Majority think that more actions needed toward the sick from the government
+
+3) Respondents' health
+
+Most of participants were in good health conditions in figure \@ref(fig:fig18). One thing to notice here is that participants health conditions increased. 
 
 ```{r fig1,echo=FALSE,fig.cap = "Distribution of national spending on foreign aid"}
 c_data$nataid <- factor(c_data$nataid,                                  
@@ -427,7 +457,7 @@ c_data  %>%
 \newpage
 
 # Results
-
+According to Forbes research, foreign aid spent by U.S is decreasing over years which was 46 billion dollars in 2018 and 38 billion dollars in 2021. In other words, this contradiction means that there could be another factors that possibly influenced thoughts on foreign aids. 
 
 
 # Discussion
@@ -460,5 +490,7 @@ sangwoong.lee@maill.utoronto.ca and young.suk@mail.utoronto.ca
 
 # References
 Smith, Tom W., Davern, Michael, Freese, Jeremy, and Morgan, Stephen L., General Social Surveys, 1972-2018 [machine-readable data file] /Principal Investigator, Smith, Tom W.; Co-Principal Investigators, Michael Davern, Jeremy Freese and Stephen L. Morgan; Sponsored by National Science Foundation. --NORC ed.-- Chicago: NORC, 2019.
+https://www.forbes.com/sites/adamandrzejewski/2021/08/04/new-report-nearly-300-billion-in-foreign-aid-spent-by-us-government/?sh=6e3454774374
+https://www.cdc.gov/drugoverdose/deaths/index.html
 
 U.S. Census Bureau (2021). Population estimates. Retrieved from https://www.census.gov/quickfacts/fact/table/US/PST045221.

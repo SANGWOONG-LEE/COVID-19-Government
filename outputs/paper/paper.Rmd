@@ -19,14 +19,19 @@ library(tidyverse)
 library(dplyr)
 library(knitr)
 library(scales)
+library(modelsummary)
 ```
 
 # Introduction
-First paragraph
+First paragraph : broader context for motivation
 
-Second paragraph 
+Second paragraph : some detail about what the paper is about
 
-Third paragraph
+Third paragraph: a clear gap that needs to be filled
+
+Fourth: what was done, what was found 
+
+5: why it is important
 
 
 This report was created using `R` [@citeR] and its libraries `tidyverse` [@tidyverse], `dplyr` [@dplyr], were used to process and clean the data, and `ggplot` [@ggplot] `bookdown` [@bookdown] and `knitr` [@knitr] was used to format this report.
@@ -38,6 +43,26 @@ c_data <- read_csv("outputs/combined_data.csv")
 ```
 
 Data Explanation 
+
+For this paper, my aim is to find out changes in U.S citizens' minds regarding government before and after COVID-19 outbreak. Following that, I obtained datasets from U.S GSS 2018 and 2021 since COVID-19 was first reported on 2019. There are numerous surveys about COVID-19, however in order to analyze changes in general thoughts, they are not as appropriate as U.S GSS. Most COVID-19 surveys were specifically aimed for health care fields. For instance, whether healthcare system was enough to cover all patients or not was a major point for most COVID-19 surveys. On the other hand, U.S GSS datasets included more various fields such as national spending on drug, crime and etc, thus it can rather represent more general changes.
+Among countless variables existing in U.S GSS, I chose opinions on national spending and government actions. Since I used two different years for comparison, I had to find out which variables were in common, then combined them. 
+
+The variables I collected were as followed:
+1) National spending on various fields (foreign aids, arms, children, big cities, crime, drug,
+education, new energy, environment, fare, healthcare, mass transportation, parks, race, roads, science and social security )
+
+2) Government's actions (income equality, the sick, the poor)
+
+3) Respondents' health
+
+There exists 17 variables in national spending and 3 variables regarding government actions. Since, dealing with all variables in this session would take much spaces, for those that did not change much between 2018 and 2022, I am going to deal with in Appendix. 
+
+
+
+
+
+
+
 
 ```{r fig1,echo=FALSE,fig.cap = "Distribution of national spending on foreign aid"}
 c_data$nataid <- factor(c_data$nataid,                                  

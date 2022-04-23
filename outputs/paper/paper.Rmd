@@ -23,17 +23,25 @@ library(modelsummary)
 ```
 
 # Introduction
-First paragraph : broader context for motivation
+Although we are currently heading back to life before COVID-19, it is no exaggeration to say that COVID-19 has altered substantial portions of life style especially until end of 2021. For instance, remote work or wearing masks in public spaces has become usual. Of course, many of us feel uncomfortable about the strict sanctions. Then, my question was who should be in charge of this pandemic. Speaking of results, it should be all of us. Probably, without radical advances in technology, such virus would not exist. However, blaming each of us for the pandemic is very rare, rather many of us tend to blame government for lack of professional actions. Then, which fields  are more vulnerable to criticism? This brings me to write this paper. 
 
+This paper is going to explore changes in U.S citizen opinions on government spending levels before and after COVID-19. Following that, I have obtained U.S GSS 2018 and 2021, and sorted variables that I considered as potential variables changed during the pandemic. Since I aimed to figure out government spending on various fields, I mainly extracted national spending levels as the variables. However, there remains a clear gap that needs to be filled. Because this paper is about general thoughts changes on government spending levels, it was hard to make decisions that some changes were due to the pandemic or not. For instance, 26% of participants said national spending on arms was too much in 2018, and 32% of them said it was too much in 2021. It is hard to tell whether the increase is solely due to the pandemic or not. 
 
-Second paragraph : some detail about what the paper is about
+In order to discern the changes by the pandemic, I was required to research U.S society backgrounds in 2018 and 2021, and they were used to along with data analysis. By plotting graphs for comparison, I sorted responses as three factors: Positive, Negative and unchanged. For instance, for positive response, many of participants required more national budgets on welfare. 
+In general, national spending on public service such as education earned positive. On the other hand, national spending on arms, or foreign aids earned negative. Of course, there exists exceptions, and they are going to be dealt with in result and discussion session. 
 
-Third paragraph: a clear gap that needs to be filled
+This paper is important in a sense that it can present new plans and visions for government budgets. Also, in a broader sense, other countries can refer to this paper for simple comparison. 
+Before we jump into the main session, I am going to briefly introduce you remained index of this paper, and what they are about.
 
-Fourth: what was done, what was found 
+2) Data: you are going to see how data was collected and sorted
 
-5: why it is important
+3) Model: you are going to observe which variables belong to negative, positive and unchanged.
 
+4) Results: you are going to read summary and analysis of data. 
+
+5) Discussion: what is remained to be solved. 
+
+6) Appendix and References.
 
 This report was created using `R` [@citeR] and its libraries `tidyverse` [@tidyverse], `dplyr` [@dplyr], were used to process and clean the data, and `ggplot` [@ggplot] `bookdown` [@bookdown] and `knitr` [@knitr] was used to format this report.
 
@@ -57,7 +65,7 @@ education, new energy, environment, fare, healthcare, mass transportation, parks
 
 There exists 17 variables in national spending and 3 variables regarding government actions. Since, dealing with all variables in this session would take much spaces, for those that did not change much from 2018 to 2022, I am going to deal with in Appendix. 
 
-First, to make the demarcation between data session and appendix, I focused on two parts: whether there existed different patterns or noticeable changes between two graphs 2018 and 2021. For instance, figure \@ref(fig:fig7) shows us same pattern between 2018 and 2022, and there exists subtle changes. On the other hand, although figure \@ref(fig:fig6) presents the same pattern, changes in percentage are relatively fluctuating than others. For an another example, figure \@ref(fig:fig2) presents different pattern between 2018 and 2021. Therefore, with respect to two the aspects, I am going to explain my data here.
+First, to make the demarcation between data session and appendix, I focused on two parts: whether there existed different patterns and noticeable changes between two graphs 2018 and 2021. For instance, figure \@ref(fig:fig7) shows us same pattern between 2018 and 2022, and there exists subtle changes. On the other hand, although figure \@ref(fig:fig6) presents the same pattern, changes in percentage are relatively fluctuating than others. For an another example, figure \@ref(fig:fig2) presents different pattern between 2018 and 2021. Therefore, with respect to the two aspects, I am going to explain my data here.
 
 1) National spending (Foreign aid, Arms, Drug addicts, Welfare, race)
 
@@ -507,8 +515,6 @@ In this session, I am going to deal with remained data explanation. Since no dra
 - Mass transportation (figure \@ref(fig:fig12))
 - Park and Recreation (figure \@ref(fig:fig13))
 - Scientific research (figure \@ref(fig:fig16)) 
-
-
 
 
 

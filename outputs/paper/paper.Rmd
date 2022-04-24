@@ -27,7 +27,7 @@ Although we are currently heading back to the life before COVID-19, it is no exa
 
 This paper is going to explore changes in U.S citizen opinions on government spending levels before and after COVID-19. Following that, I have obtained data from U.S GSS 2018 and 2021, and sorted variables that I considered as potential variables that were possibly changed during the pandemic. I aimed to figure out government spending on various fields, so I mainly extracted national spending levels as the variables. However, there remains a clear gap that needs to be filled. Because this paper is about general thought changes on government spending levels, it was hard to make clear decisions that the changes were due to solely the pandemic or not. For instance, 26% of participants said national spending on arms was too much in 2018, and 32% of them said it was too much in 2021. It is hard to tell whether the increase was occurred solely from the pandemic or not. 
 
-In order to discern the changes by the pandemic and others, I was required to research U.S society backgrounds from 2018 to 2021, and they were used along with data analysis. By plotting graphs for comparison between 2018 and 2021, I was able to sort the variables o=into three categories: Positive, Negative and unchanged reaction. For instance, for the positive reaction, there was drop in "Too much" and increase in "Too little" and vice versa for negative category. National spending on welfare and drug belong to the positive group. On the other hand, national spending on arms, or foreign aids belong to negative. Of course, there exists exceptions within the groups, and they are going to be dealt with in result and discussion session. 
+In order to discern the changes by the pandemic and others, I was required to research U.S society backgrounds from 2018 to 2021, and they were used along with data analysis. By plotting graphs for comparison between 2018 and 2021, I was able to sort the variables into three categories: Positive, Negative and unchanged reaction. For instance, for the positive reaction, there was drop in "Too much" and increase in "Too little" or "About right", and vice versa for negative category. National spending on welfare and drug belong to the positive group. On the other hand, national spending on arms, or foreign aids belong to negative. Of course, there exists exceptions within the groups, and they are going to be dealt with in result and discussion session. 
 
 This paper is important in a sense that the pandemic is not over yet, so it can present new plans and visions for government budgets. Also, in a broader sense, other countries can refer to this paper for simple comparison. 
 Before we jump into the main session, I am going to briefly introduce you remained index of this paper, and what they are about.
@@ -107,7 +107,7 @@ Most of participants were in good health conditions in figure \@ref(fig:fig18). 
 
 # Model
 
-Since I do not have exact y-value in my data, I am going to create representative from the three categories: positive, negative and unchanged, then double check whether they belong to appropriate groups or not. To do that, I am going to use multiple linear regression model. Since changes must move together once they belong to same groups, I decided that multiple linear regression model could explain better than others. In order to sort variables into the three groups, I followed the result from data session, and set changes less than 5% as unchanged. The outcome is as followed:
+Since I do not have exact y-value in my data, I am going to create representative from the three categories: positive, negative and unchanged, then double check whether they belong to appropriate groups or not. To do that, I am going to use multiple linear regression model. Since direction of changes must move together once they belong to same groups, I decided that multiple linear regression model could explain better than others. In order to sort variables into the three groups, I followed the result from data session, and set changes less than 5% as unchanged. The outcome is as followed:
 
 1) Positive: Drug Addicts, Welfare, eqwlth, helppoor
 
@@ -146,7 +146,7 @@ In this session, we are going to explore remained and unanswered questions from 
 Throughout this paper, we have figured out U.S citizens' various responses regarding their government specifically between 2018 and 2021. By focusing on COVID-19 influences along with backgrounds, I have found out three responses: positive, negative and unchanged. For positive response, variables were collected with respect to changes moved to "Too little" or "About right" in national spending levels. I have observed that strict COVID-19 sanctions or ripple effects from the sanctions affected the thoughts on national spending levels on drug, Welfare and actions on equalizing income differences. Furthermore, the change in drug presented that potential indifference existing in U.S citizens minds. For negative response, variables were collected regarding changes moved to "Too much". I have figured out that the government successfuly dealt with the pandemic regarding healthcare, and nationalism took great deal of explanation for negative responses. Lastly, unchanged variables were mostly related to essential services such as road and education. Also, unexpectedly outdoor services dodged the ripple effects from the sanction.
 
 ## what is something that we learn about the world?
-We have learned that there existed changes in U.S citizens' mind after COVID-19 breakout. However, considering the shock that COVID-19 gave us unlike other viruses such as Ebola, the change was subtle. In other words, the world keeps going by coping with such challenges. 
+We have learned that there existed changes in U.S citizens' mind after COVID-19 breakout. However, considering the shock that COVID-19 gave us unlike other viruses such as Ebola, the change was subtle. In other words, the world keeps going by coping with such challenges. Also, many reported that their health condition is in good shape. figure \@ref(fig:fig18)
 
 ## how we should proceed in the future
 As we are currently facing the end of pandemic, invisible problems will rise on the surface. Further surveys on various fields are needed to deal with them. For instance, racial problems will not sink unless we all try to solve them. Also, as my paper presented, essential fields like education or childcare must go on regardless the challenge because they are the future. 
@@ -548,14 +548,6 @@ In this session, I am going to deal with remained data explanation. Since no not
 - Mass transportation (figure \@ref(fig:fig12))
 - Park and Recreation (figure \@ref(fig:fig13))
 - Scientific research (figure \@ref(fig:fig16)) 
-
-
-
-
-## End Page
-
-Thank you for participating in our survey. If you have any questions please do not hesitate to contact us.
-sangwoong.lee@maill.utoronto.ca 
 
 \newpage
 

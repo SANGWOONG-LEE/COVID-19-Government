@@ -4,7 +4,7 @@ subtitle: "COVID-19 influences on U.S citizens' mind regarding government action
 author: 
   - SangWoong Lee
 date: "`r format(Sys.time(), '%d %B %Y')`"
-abstract: "First sentence. Second sentence. Third sentence. Last sentence."
+abstract: "This paper has been examined to find out U.S citizens' opinions on government budget sectors that were changed by COVID-19. I have found that there existed variables that presented negative, positive and unchanged responses. This is important in a sense that it relates to lives as well as becomes an indication for why such gap exited. We will discuss its importance in details later in discussion session."
 output:
   bookdown::pdf_document2:
     fig_caption: yes
@@ -143,13 +143,16 @@ This group can be interpreted as a group that was absolutely essential in societ
 In this session, we are going to explore remained and unanswered questions from results session.
 
 ## Summary
-Throughout this paper, we have figured out U.S citizens' various responses regarding their government specifically between 2018 and 2021. By focusing on COVID-19 influences along with backgrounds, I have found out three responses: positive, negative and unchanged. For positive response, variables were collected with respect to changes moved to "Too little" or "About right" in national spending levels. I have observed that strict COVID-19 sanctions or ripple effects from the sanctions affected the thoughts on national spending levels on drug, Welfare and actions on equalizing income differences. Furthermore, the change in drug presented that potential indifference existing in U.S citizens minds. For negative response, variables were collected regarding changes moved to "Too much". I have figured out that the government successfuly dealt with the pandemic regarding healthcare, and nationalism took great deal of explanation for negative responses. Lastly, unchanged variables were mostly related to essential services such as road and education. Also, unexpectedly outdoor services dodged the ripple effects of the sanction.
+Throughout this paper, we have figured out U.S citizens' various responses regarding their government specifically between 2018 and 2021. By focusing on COVID-19 influences along with backgrounds, I have found out three responses: positive, negative and unchanged. For positive response, variables were collected with respect to changes moved to "Too little" or "About right" in national spending levels. I have observed that strict COVID-19 sanctions or ripple effects from the sanctions affected the thoughts on national spending levels on drug, Welfare and actions on equalizing income differences. Furthermore, the change in drug presented that potential indifference existing in U.S citizens minds. For negative response, variables were collected regarding changes moved to "Too much". I have figured out that the government successfuly dealt with the pandemic regarding healthcare, and nationalism took great deal of explanation for negative responses. Lastly, unchanged variables were mostly related to essential services such as road and education. Also, unexpectedly outdoor services dodged the ripple effects from the sanction.
 
 ## what is something that we learn about the world?
+We have learned that there existed changes in U.S citizens' mind after COVID-19 breakout. However, considering the shock that COVID-19 gave us unlike other viruses such as Ebola, the change was subtle. In other words, the world keeps going by coping with such challenges. 
 
+## how we should proceed in the future
+As we are currently facing the end of pandemic, invisible problems will rise on the surface. Further surveys on various fields are needed to deal with them. For instance, racial problems will not sink unless we all try to solve them. Also, as my paper presented, essential fields like education or childcare must go on regardless the challenge because they are the future. 
 
-
-## Weaknesses and how we should proceed in the future
+## Weakness
+As US GSS aims to observe general thought changes, there existed limits on finding out sources of the change. For instance, figure \@ref(fig:fig14) clearly presented that there was negative responses regarding national spending levels on racial problems, however it was hard to tell whether it occured from COVID-19 or other factors such as BLM protest not. 
 
 
 ```{r fig1,echo=FALSE,fig.cap = "Distribution of national spending on foreign aid"}
@@ -559,8 +562,12 @@ sangwoong.lee@maill.utoronto.ca
 
 # References
 Smith, Tom W., Davern, Michael, Freese, Jeremy, and Morgan, Stephen L., General Social Surveys, 1972-2018 [machine-readable data file] /Principal Investigator, Smith, Tom W.; Co-Principal Investigators, Michael Davern, Jeremy Freese and Stephen L. Morgan; Sponsored by National Science Foundation. --NORC ed.-- Chicago: NORC, 2019.
-https://www.forbes.com/sites/adamandrzejewski/2021/08/04/new-report-nearly-300-billion-in-foreign-aid-spent-by-us-government/?sh=6e3454774374
-https://www.cdc.gov/drugoverdose/deaths/index.html
+
+Andrzejewski, Adam. n.d. “New Report: Nearly $300 Billion in Foreign Aid Spent by U.S. Government.” Forbes. Accessed April 24, 2022. https://www.forbes.com/sites/adamandrzejewski/2021/08/04/new-report-nearly-300-billion-in-foreign-aid-spent-by-us-government/?sh=6e3454774374.
+
+Centers for Disease Control and Prevention. 2021. “Drug Overdose Deaths.” Www.cdc.gov. June 23, 2021. https://www.cdc.gov/drugoverdose/deaths/index.html.
 
 U.S. Census Bureau (2021). Population estimates. Retrieved from https://www.census.gov/quickfacts/fact/table/US/PST045221.
-https://www.forbes.com/sites/niallmccarthy/2020/03/12/the-countries-with-the-most-critical-care-beds-per-capita-infographic/?sh=347315dc7f86
+
+McCarthy, Niall. n.d. “The Countries with the Most Critical Care Beds per Capita [Infographic].” Forbes. Accessed April 24, 2022. https://www.forbes.com/sites/niallmccarthy/2020/03/12/the-countries-with-the-most-critical-care-beds-per-capita-infographic/?sh=347315dc7f86.
+‌

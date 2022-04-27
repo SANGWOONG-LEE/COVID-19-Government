@@ -41,7 +41,7 @@ Before we jump into the main session, I am going to briefly introduce you remain
 
 6) Appendix and References.
 
-This report was created using `R` [@citeR] and its libraries `tidyverse` [@tidyverse], `dplyr` [@dplyr], were used to process and clean the data, and `ggplot` [@ggplot] `bookdown` [@bookdown] and `knitr` [@knitr] was used to format this report.
+This report was created using `R` [@citeR] and its libraries `tidyverse` [@tidyverse], `dplyr` [@dplyr], were used to process and clean the data, and `ggplot` [@ggplot] `bookdown` [@bookdown] and `knitr` [@knitr], `scales` [@scales] was used to format this report.
 
 # Data
 ```{r, include=FALSE, echo=FALSE}

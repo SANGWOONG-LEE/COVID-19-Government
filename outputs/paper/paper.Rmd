@@ -19,7 +19,6 @@ library(tidyverse)
 library(dplyr)
 library(knitr)
 library(scales)
-library(modelsummary)
 ```
 
 # Introduction

@@ -199,8 +199,8 @@ c_data <-
 
 #### Save ####
 write_csv(c_data, 'outputs/combined_data.csv')
-write_csv(reduced_data1, 'outputs/reduced_data1.csv')
-write_csv(reduced_data2, 'outputs/reduced_data2.csv')
+write_csv(reduced_data1, 'outputs/reduced1_data.csv')
+write_csv(reduced_data2, 'outputs/reduced2_data.csv')
 
 
 

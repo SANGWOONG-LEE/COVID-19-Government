@@ -1,5 +1,5 @@
 ---
-title: "Missing years 2019 and 2020^[Code and data are available at: https://github.com/SANGWOONG-LEE/2016electionanalysis]"
+title: "Missing years 2019 and 2020^[Code and data are available at: https://github.com/SANGWOONG-LEE/COVID-19-Government]"
 subtitle: "COVID-19 influences on U.S citizens' mind regarding government actions"
 author: 
   - SangWoong Lee
